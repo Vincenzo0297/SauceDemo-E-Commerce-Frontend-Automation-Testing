@@ -23,7 +23,7 @@ pipeline {
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run --rm saucedemo-tests'
+                bat 'docker run saucedemo-tests'
             }
         }
     }
