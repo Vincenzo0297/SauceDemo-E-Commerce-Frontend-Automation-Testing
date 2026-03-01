@@ -24,7 +24,9 @@ public class TC1_SauceDemo {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");   // Incognito mode
         options.addArguments("--start-maximized"); // Maximize window
-
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         // Create driver with options
         driver = new ChromeDriver(options);
     }

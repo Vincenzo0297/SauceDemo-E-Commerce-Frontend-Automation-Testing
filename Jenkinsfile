@@ -15,9 +15,15 @@ pipeline {
             }
         }
 
-        stage('Archive') {
+        stage('Build Docker Image') {
             steps {
-                archiveArtifacts 'target/*.jar'
+                bat 'docker build -t saucedemo-tests .'
+            }
+        }
+
+        stage('Run Docker Container') {
+            steps {
+                bat 'docker run --rm saucedemo-tests'
             }
         }
     }
