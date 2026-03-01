@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . .
 
 # Run Maven build + tests
-CMD ["mvn", "clean", "test]
+CMD ["mvn", "clean", "test"]
